@@ -1,0 +1,7 @@
+build
+build/*
+libhex.xcodeproj
+libhex.xcodeproj/*
+libhex.xcodeproj/*/*
+libhex.xcodeproj/*/*/*
+libhex.xcodeproj/*/*/*/*
