@@ -9,16 +9,40 @@
 #ifndef LIBHEX_UI_Impl_TTY_h
 #define LIBHEX_UI_Impl_TTY_h
 
-#include <Engine/Common.h>
+# include <Engine/Common.h>
 
-#include <Model/OutputBuffer.h>
+# include <Model/OutputBuffer.h>
 
-#include <UI/Impl/Impl.h>
-#include <UI/Attribute.h>
+# include <UI/Impl/Impl.h>
+# include <UI/Attribute.h>
+
+# include <sys/ioctl.h>
+# include <termios.h>
+# include <unistd.h>
 
 @interface Hex_UIImplementation_TTY : Hex_UIImplementation_Base<Hex_UIImplementation> {
-    
+    struct winsize windowSize;
 }
+
+@property (atomic, readwrite, assign) struct winsize windowSize;
+
++ setRawMode:(bool) useRawMode;
+
++ (void) UIDidFinishLaunching;
++ (void) UIWillTerminate;
+
++ (void) initialize;
++ (id<Hex_UIImplementation>) getInstance;
+
+- (id) init;
+
+- (void) measureOutput;
+
+- (void) refresh;
+- (void) clear;
+
+- (char) getCharacter;
+- (void) getString:(char *) buffer withLength:(int) length;
 
 @end
 

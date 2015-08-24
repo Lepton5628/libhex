@@ -45,10 +45,13 @@
 @end
 
 /**
- * Base class which implements some of the variables and properties for <Hex_UIImplementation>
+ * Base class which implements some of the variables and properties for <Hex_UIImplementation>, as well as it's singleton pattern.
  */
 @interface Hex_UIImplementation_Base : HexObject {
     Hex_M_UIOutputBuffer *outputBuffer;
+    
+    Hex_Char **output_buffer_alias;
+    bool **change_buffer_alias;
     
     int width, height;
     

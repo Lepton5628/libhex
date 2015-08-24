@@ -52,21 +52,23 @@ green(){
 }
 
 check_dependency(){
-    if gcc -o test/deps/build/$1 test/deps/src/$1.c > /dev/null 2>&1; then
-        if test/deps/build/$1; then
+    if gcc -o tests/deps/build/$1 tests/deps/src/$1.c > tests/deps/build/error 2>&1; then
+        if tests/deps/build/$1; then
             green "Your installation of $1 is working!"
         else
             failure "Your installation of $1 is not working"
         fi
     else
-        failure "You do not have $1 installed"
+        failure "You do not have $1 installed. Error: \n $( cat tests/deps/build/error )"
     fi
 }
 
 deps(){
     echo "\tChecking dependencies..."
 
-#    check_dependency arc4random
+    check_dependency arc4random
+    check_dependency termios
+    check_dependency ioctl
 
     echo "\tDone"
 }
