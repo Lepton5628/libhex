@@ -49,3 +49,13 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
 `./install <directory-to-install-to>`
 
  7. Now you should have the header files in `<directory-to-install-to>/include`, and `libhex.a` in `<directory-to-install-to>/lib`
+
+### For those of you on Windows
+
+ 0. Get Cygwin.
+
+ 1. I'm afraid your on your own now. Try using the Linux/Unix instructions.
+
+'Cause, see, `libhex` uses `<sys/ioctl.h>`, `<termios.h>`, `<unistd.h>`.
+
+ 2. Pray to the _first_ pantheon of deities that comes to mind. And may the gods have mercy on your soul.
