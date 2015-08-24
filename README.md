@@ -54,8 +54,6 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
 
  0. Get Cygwin.
 
- 1. I'm afraid your on your own now. Try using the Linux/Unix instructions.
-
-'Cause, see, `libhex` uses `<sys/ioctl.h>`, `<termios.h>`, `<unistd.h>`.
+ 1. I'm afraid your on your own now. Try using the Linux/Unix instructions. And hope that I have implemented a cross platform graphical solution.
 
  2. Pray to the first pantheon of deities that comes to mind. And may the gods have mercy on your soul.
