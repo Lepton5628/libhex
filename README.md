@@ -58,4 +58,4 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
 
 'Cause, see, `libhex` uses `<sys/ioctl.h>`, `<termios.h>`, `<unistd.h>`.
 
- 2. Pray to the _first_ pantheon of deities that comes to mind. And may the gods have mercy on your soul.
+ 2. Pray to the first pantheon of deities that comes to mind. And may the gods have mercy on your soul.
