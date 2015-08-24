@@ -34,6 +34,8 @@
 - (char) getCharacter;
 - (void) getString:(char *) buffer withLength:(int) length;
 
+- (void) UIWindowSizeDidChange;
+
 @property (weak, atomic, readwrite, assign) Hex_M_UIOutputBuffer *outputBuffer;
 
 @property (atomic, readonly) int width;

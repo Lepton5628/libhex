@@ -16,7 +16,7 @@
  *
  * @MVC-Role: Model
  */
-typedef struct Hex_Char {
+struct Hex_Char {
     Hex_Char(){}
     
     Hex_Char(char a){

@@ -20,19 +20,21 @@
 # include <termios.h>
 # include <unistd.h>
 
+# include <clocale>
+# include <cstdio>
+
 @interface Hex_UIImplementation_TTY : Hex_UIImplementation_Base<Hex_UIImplementation> {
     struct winsize windowSize;
 }
 
 @property (atomic, readwrite, assign) struct winsize windowSize;
 
-+ setRawMode:(bool) useRawMode;
++ (void) setRawMode:(bool) useRawMode;
 
 + (void) UIDidFinishLaunching;
 + (void) UIWillTerminate;
 
-+ (void) initialize;
-+ (id<Hex_UIImplementation>) getInstance;
++ (void) UIWindowSizeDidChange;
 
 - (id) init;
 

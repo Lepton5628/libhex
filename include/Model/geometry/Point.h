@@ -11,14 +11,13 @@
 
 #include <Engine/Common.h>
 
-@interface Hex_MGPoint : HexObject {
+struct Hex_MGPoint {
     int x, y;
-}
-
-@property (atomic) int x, y;
-
-- (id) initWithX:(int)x andY:(int) y;
-
-@end
+    
+    Hex_MGPoint(int x, int y){
+        this->x = x;
+        this->y = y;
+    }
+};
 
 #endif
