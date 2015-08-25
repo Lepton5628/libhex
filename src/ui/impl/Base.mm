@@ -46,6 +46,9 @@ static id<Hex_UIImplementation> my_instantiation = nil;
 
 - (id) init {
     // Does nothing, 'cause called by children
+    self = [super init];
+    
+    return self;
 }
 
 - (void) measureOutput {

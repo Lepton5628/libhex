@@ -11,6 +11,22 @@
 
 @implementation Hex_UIImplementation_TTY
 
+static id<Hex_UIImplementation> my_instantiation = nil;
+
++ (void) initialize {
+    static bool am_i_instantiated = false;
+    
+    if(!am_i_instantiated){
+        am_i_instantiated = true;
+        my_instantiation = [[self alloc] init];
+    }
+}
+
++ (id<Hex_UIImplementation>) getInstance {
+    /* Because + (void) initialize has already been called by libobjc, it will return the single instance */
+    return my_instantiation;
+}
+
 @synthesize windowSize = windowSize;
 
 + (void) setRawMode:(bool) useRawMode {
@@ -65,6 +81,8 @@
     self = [super init];
     if(self){
         [self measureOutput];
+        
+        self.outputBuffer = [[Hex_M_UIOutputBuffer alloc] initWithDimensions:Hex_MGPoint(self.width, self.height)];
     }
     return self;
 }

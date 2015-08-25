@@ -4,9 +4,14 @@
 Hex_UIInterface *io;
 
 int main(){
-//    [Hex_UIInterface setRawMode: true];
+    [Hex_UIInterface setRawMode: true];
     
     io = [Hex_UIInterface getInstance];
-        
-//    [Hex_UIInterface setRawMode: false];
+    
+    [io clear];
+    [io refresh];
+    
+    [io getCharacter];
+    
+    [Hex_UIInterface setRawMode: false];
 }

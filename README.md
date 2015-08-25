@@ -13,16 +13,18 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
  1. Open Terminal.app (C'mon, you should know this)
 
  2. Run this command:
+```
+./make
+```
 
-`./make`
-
- 3. If does not compile, please send me a bug report. If it's something about GCC, or you're using OS X <= 10.9, I might not be able to help, so you may have to do some patching. I only have `clang` on 10.10.1, and there is only so much I can do without admin.
+ 3. If does not compile, please send me a bug report. If it's something about GCC, or you're using OS X <= 10.9, I might not be able to help, so you may have to do some patching. I only have `clang` on 10.10.1 and GCC on 10.4.11 PPC, <strike>and there is only so much I can do without admin</strike>.
 
  4. If the compile was successful, there should be a libhex.a in the build directory.
 
  5. Run this command:
-
-`install <directory-to-install-to>`
+```
+./install <directory-to-install-to>
+```
 
  6. If you get any permissions problems with step 5, then try using `sudo ./install <directory-to-install-to>` (Requires admin)
 
@@ -39,14 +41,16 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
  3. Add `-lobjc` to `$CCFLAGS` in `./make`.
 
  4. Run:
-
-`./make`
+```
+./make
+```
 
  5. If you encounter any errors, post a bug report. I may or may not be able to help you.
 
  6. Run:
-
-`./install <directory-to-install-to>`
+```
+./install <directory-to-install-to>
+```
 
  7. Now you should have the header files in `<directory-to-install-to>/include`, and `libhex.a` in `<directory-to-install-to>/lib`
 
@@ -54,8 +58,8 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
 
  0. Get Cygwin.
 
- 0.5. Get a bottle of scotch and a litre of coffee. You're gonna need 'em.
+ 1. Get a bottle of scotch and a litre of coffee. You're gonna need 'em.
 
- 1. I'm afraid your on your own now. Try using the Linux/Unix instructions. And hope that I have implemented a cross platform graphical solution.
+ 2. I'm afraid your on your own now. Try using the Linux/Unix instructions. And hope that I have implemented a cross platform graphical solution.
 
- 2. Pray to the first pantheon of deities that comes to mind. And may the gods have mercy on your soul.
+ 3. Pray to the first pantheon of deities that comes to mind. And may the gods have mercy on your soul.

@@ -19,14 +19,7 @@
  *
  * @MVC-Role: Model. attr
  */
-@interface Hex_M_UIOutputBuffer {
-    Hex_Char **output_buffer;
-    bool **change_buffer;
-    
-    int width, height;
-    
-    int x, y;
-}
+@interface Hex_M_UIOutputBuffer : HexObject
 
 @property (atomic, readwrite) int width;
 @property (atomic, readwrite) int height;
@@ -36,6 +29,8 @@
 
 @property (atomic, readwrite) int x;
 @property (atomic, readwrite) int y;
+
+@property (atomic, readwrite) Hex_Char defaultAttributeSet;
 
 /**
  * Create new object with the dimensions specified in @c dimensions.
@@ -134,15 +129,18 @@
  * Move the cursor to @c X and @c Y
  *
  */
-- (void) moveToX:(int) X andY:(int) y;
+- (void) moveTo:(int)x :(int) y;
 
 - (void) empty;
 
 - (void) allocateBuffers;
 - (void) deallocateBuffers;
 
-- (void) setDefaultAttributeSet:(Hex_Char) attr;
-- (Hex_Char) getDefaultAttributeSet;
+- (void) setDefaultForegroundColor:(char) default_fg;
+- (void) setDefaultBackgroundColor:(char) default_bg;
+- (void) setDefaultIsBold:(bool) isBold;
+- (void) setDefaultIsReversedVideo:(bool) isReversed;
+- (void) setDefaultIsBlinking:(bool) isBlinking;
 
 @end
 

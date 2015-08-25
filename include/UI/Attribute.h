@@ -18,39 +18,39 @@
  */
 struct Hex_Char {
     Hex_Char(){}
-    
+
     Hex_Char(char a){
         this->ascii = a;
     }
-    
+
     /**
      * Set foreground color.
      */
     void operator-=(int a){
         this->foreground = a;
     }
-    
+
     /**
      * Set background color.
      */
     void operator+=(int a){
         this->background = a;
     }
-    
+
     /**
      * Set bold text.
      */
     void operator*=(int a){
         this->bold = (bool)a;
     }
-    
+
     /**
      * Set reverse video.
      */
     void operator/=(int a){
         this->reverse = (bool)a;
     }
-    
+
     operator int(){
         unsigned long long result = this->ascii;
         result |= (foreground << 8);
@@ -65,11 +65,11 @@ struct Hex_Char {
 //        result |= (struct_pad << 40);
         return result;
     }
-    
+
     void operator|=(struct Hex_Char x){
         return this->operator|=((int)x);
     }
-    
+
     void operator|=(int x){
         this->ascii |= (x & 0xFF);
         this->foreground |= (x & 0xFF00) >> 8;
@@ -82,7 +82,7 @@ struct Hex_Char {
 // 'Jis padding = expendable
 //      this->struct_pad |= (x &FFFFFF00000000) >> 40;
     }
-    
+
     void operator&=(int x){
         this->ascii &= (x & 0xFF);
         this->foreground &= (x & 0xFF00) >> 8;
@@ -95,7 +95,7 @@ struct Hex_Char {
 // 'Jis padding = expendable
 //      this->struct_pad &= (x &FFFFFF00000000) >> 40;
     }
-    
+
     void operator=(int x){
         this->ascii = (x & 0xFF);
         this->foreground = (x & 0xFF00) >> 8;
@@ -108,7 +108,7 @@ struct Hex_Char {
 // 'Jis padding = expendable
 //      this->struct_pad = (x &FFFFFF00000000) >> 40;
     }
-    
+
     /**
      * The ascii value of the character.
      */
@@ -145,12 +145,12 @@ struct Hex_Char {
      * Padding
      */
     unsigned long long flag_pad       : 5;
-    
+
     /**
      * Aliases for UTF-8 output.
      */
     unsigned long long unicode_alias  : 8;
-    
+
     /**
      * @internal
      * Padding
