@@ -13,18 +13,18 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
  1. Open Terminal.app (C'mon, you should know this)
 
  2. Run this command:
-```
-./make
-```
+    ```
+    ./make
+    ```
 
  3. If does not compile, please send me a bug report. If it's something about GCC, or you're using OS X <= 10.9, I might not be able to help, so you may have to do some patching. I only have `clang` on 10.10.1 and GCC on 10.4.11 PPC, <strike>and there is only so much I can do without admin</strike>.
 
  4. If the compile was successful, there should be a libhex.a in the build directory.
 
  5. Run this command:
-```
-./install <directory-to-install-to>
-```
+    ```
+    ./install <directory-to-install-to>
+    ```
 
  6. If you get any permissions problems with step 5, then try using `sudo ./install <directory-to-install-to>` (Requires admin)
 
