@@ -13,7 +13,14 @@
 # include <Objc/Objc-Runtime.h>
 # include <Objc/Objc-Api.h>
 
-@interface HexObject {
+#if defined(__APPLE__) && defined(__MACH__)
+# import <Foundation/NSObject.h>
+# define HEX_ROOT_CLASS NSObject
+#else
+# define HEX_ROOT_CLASS Object
+#endif
+
+@interface HexObject : HEX_ROOT_CLASS {
     int __hex_references;
 }
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Max C. All rights reserved.
 //
 
-#include <UI/Impl/TTY.h>
-#include <UI/Attribute.h>
+#import <UI/Impl/TTY.h>
+#import <UI/Attribute.h>
 
 @implementation Hex_UIImplementation_TTY
 
@@ -45,15 +45,15 @@
 + (void) UIDidFinishLaunching {
     setlocale(LC_ALL, "");
     
-    [Hex_UIImplementation_TTY useRawMode:true];
+    [Hex_UIImplementation_TTY setRawMode:true];
 }
 
 + (void) UIWillTerminate {
-    [Hex_UIImplementation_TTY useRawMode:false];
+    [Hex_UIImplementation_TTY setRawMode:false];
 }
 
 + (void) UIWindowSizeDidChange {
-    Hex_UIImplementation_TTY *tty = [self getInstance];
+    Hex_UIImplementation_TTY *tty = (Hex_UIImplementation_TTY *)[self getInstance];
     
     [tty measureOutput];
     

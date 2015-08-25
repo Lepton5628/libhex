@@ -14,6 +14,7 @@
 # include <Model/OutputBuffer.h>
 
 # include <UI/Impl/Impl.h>
+# include <UI/Impl/Base.h>
 # include <UI/Attribute.h>
 
 # include <sys/ioctl.h>

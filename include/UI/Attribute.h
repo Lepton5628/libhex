@@ -51,6 +51,64 @@ struct Hex_Char {
         this->reverse = (bool)a;
     }
     
+    operator int(){
+        unsigned long long result = this->ascii;
+        result |= (foreground << 8);
+        result |= (background << 16);
+        result |= (bold << 24);
+        result |= (blink << 25);
+        result |= (reverse << 26);
+// Jis' padding = expendable
+//        result |= (flag_pad << 31);
+        result |= (unicode_alias << 32);
+// Jis' padding = expendable
+//        result |= (struct_pad << 40);
+        return result;
+    }
+    
+    void operator|=(struct Hex_Char x){
+        return this->operator|=((int)x);
+    }
+    
+    void operator|=(int x){
+        this->ascii |= (x & 0xFF);
+        this->foreground |= (x & 0xFF00) >> 8;
+        this->background |= (x & 0xFF0000) >> 16;
+        this->bold |= (x & 0x1000000) >> 24;
+        this->blink |= (x & 0x2000000) >> 25;
+        this->reverse |= (x & 0x4000000) >> 26;
+// Not gonnae do flag pad, 'cause it's liable to change lateah.
+        this->unicode_alias |= (x & 0xFF00000000) >> 32;
+// 'Jis padding = expendable
+//      this->struct_pad |= (x &FFFFFF00000000) >> 40;
+    }
+    
+    void operator&=(int x){
+        this->ascii &= (x & 0xFF);
+        this->foreground &= (x & 0xFF00) >> 8;
+        this->background &= (x & 0xFF0000) >> 16;
+        this->bold &= (x & 0x1000000) >> 24;
+        this->blink &= (x & 0x2000000) >> 25;
+        this->reverse &= (x & 0x4000000) >> 26;
+// Not gonnae do flag pad, 'cause it's liable to change lateah.
+        this->unicode_alias &= (x & 0xFF00000000) >> 32;
+// 'Jis padding = expendable
+//      this->struct_pad &= (x &FFFFFF00000000) >> 40;
+    }
+    
+    void operator=(int x){
+        this->ascii = (x & 0xFF);
+        this->foreground = (x & 0xFF00) >> 8;
+        this->background = (x & 0xFF0000) >> 16;
+        this->bold = (x & 0x1000000) >> 24;
+        this->blink = (x & 0x2000000) >> 25;
+        this->reverse = (x & 0x4000000) >> 26;
+// Not gonnae do flag pad, 'cause it's liable to change lateah.
+        this->unicode_alias = (x & 0xFF00000000) >> 32;
+// 'Jis padding = expendable
+//      this->struct_pad = (x &FFFFFF00000000) >> 40;
+    }
+    
     /**
      * The ascii value of the character.
      */

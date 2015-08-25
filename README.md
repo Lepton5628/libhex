@@ -54,6 +54,8 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
 
  0. Get Cygwin.
 
+ 0.5. Get a bottle of scotch and a litre of coffee. You're gonna need 'em.
+
  1. I'm afraid your on your own now. Try using the Linux/Unix instructions. And hope that I have implemented a cross platform graphical solution.
 
  2. Pray to the first pantheon of deities that comes to mind. And may the gods have mercy on your soul.
