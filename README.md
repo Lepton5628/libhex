@@ -41,16 +41,16 @@ Note: For anyone wondering, this library does NOT rely on anything related to Ma
  3. Add `-lobjc` to `$CCFLAGS` in `./make`.
 
  4. Run:
-```
-./make
-```
+    ```
+    ./make
+    ```
 
  5. If you encounter any errors, post a bug report. I may or may not be able to help you.
 
  6. Run:
-```
-./install <directory-to-install-to>
-```
+    ```
+    ./install <directory-to-install-to>
+    ```
 
  7. Now you should have the header files in `<directory-to-install-to>/include`, and `libhex.a` in `<directory-to-install-to>/lib`
 
