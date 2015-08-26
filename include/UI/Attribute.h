@@ -21,6 +21,22 @@ struct Hex_Char {
 
     Hex_Char(char a){
         this->ascii = a;
+        this->foreground = 0;
+        this->background = 0;
+        this->bold = false;
+        this->reverse = false;
+        this->blink = false;
+        this->unicode_alias = 0;
+    }
+    
+    Hex_Char(char a, unsigned char fg, unsigned char bg){
+        this->ascii = a;
+        this->foreground = fg;
+        this->background = bg;
+        this->bold = false;
+        this->reverse = false;
+        this->blink = false;
+        this->unicode_alias = 0;
     }
 
     /**
@@ -159,5 +175,13 @@ struct Hex_Char {
 };
 
 typedef struct Hex_Char Hex_Char;
+
+@interface HexColor : HexObject
+
++ (unsigned char) colorWithR:(char)r G:(char)g B:(char)b;
++ (unsigned char) colorWithRGB:(char)r :(char)g :(char)b;
++ (unsigned char) colorWithGreyscale:(char)g;
+
+@end
 
 #endif

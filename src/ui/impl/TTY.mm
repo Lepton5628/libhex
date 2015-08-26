@@ -114,10 +114,10 @@ static id<Hex_UIImplementation> my_instantiation = nil;
                 printf("\x1b[%i;%iH", i + 1, j + 1);
                 
                 if(cc.foreground){
-                    printf("\x1b[38;5;%im", cc.foreground);
+                    printf("\x1b[38;5;%im", cc.foreground - 1);
                 }
                 if(cc.background){
-                    printf("\x1b[48;5;%im", cc.background);
+                    printf("\x1b[48;5;%im", cc.background - 1);
                 }
                 if(cc.bold){
                     printf("\x1b[1m");

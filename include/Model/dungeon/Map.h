@@ -6,8 +6,15 @@
 //  Copyright (c) 2015 Max C. All rights reserved.
 //
 
-#ifndef libhex_Map_h
-#define libhex_Map_h
+#ifndef libhex_Model_Map_h
+#define libhex_Model_Map_h
 
+#include <Engine/Common.h>
+
+@interface Hex_MMap : HexObject
+
+
+
+@end
 
 #endif

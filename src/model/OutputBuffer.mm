@@ -1,4 +1,5 @@
 #include <Model/OutputBuffer.h>
+#include <stdio.h>
 
 @implementation Hex_M_UIOutputBuffer
 
@@ -10,6 +11,11 @@
     
     [self allocateBuffers];
     [self setDefaultAttributeSet: 0];
+    [self setDefaultForegroundTo: 16];
+    [self setDefaultBackgroundTo: 1];
+    [self setDefaultIsBoldTo: 0];
+    [self setDefaultIsBlinkingTo: 0];
+    [self setDefaultIsReverseTo: 0];
     
     [self setX: 0];
     [self setY: 0];
@@ -38,9 +44,11 @@
 }
 
 - (void) addChar:(Hex_Char) chr {
-    if(!((int)chr & 0xFFFFFFFFFFFFFF00)){
-        
-    }
+    if(chr.foreground == 0)
+        chr.foreground = [self defaultAttributeSet]->foreground;
+    if(chr.background == 0)
+        chr.background = [self defaultAttributeSet]->background;
+
     self.change_buffer[self.y][self.x] = true;
     self.output_buffer[self.y][self.x] = chr;
     
@@ -50,6 +58,27 @@
 - (void) addChar:(Hex_Char) chr atPosition:(Hex_MGPoint) pos {
     [self moveTo:pos];
     [self addChar:chr];
+}
+
+- (void) addString:(char *) str {
+    for(int i = 0;i < strlen(str);i++){
+        [self addChar:str[i]];
+    }
+}
+
+- (void) addString:(char *) str atPosition:(Hex_MGPoint) pos {
+    [self moveTo:pos.x:pos.y];
+    for(int i = 0;i < strlen(str);i++){
+        [self addChar:str[i]];
+    }
+}
+
+- (Hex_Char) getChar {
+    return self.output_buffer[[self y]][[self x]];
+}
+
+- (Hex_Char) getCharAtPosition:(Hex_MGPoint) pos {
+    return self.output_buffer[pos.y][pos.x];
 }
 
 - (void) empty {
@@ -74,6 +103,10 @@
         }
     }
     [self moveTo:lx :ly];
+}
+    
+- (void) moveTo:(Hex_MGPoint) pos {
+    [self moveTo:pos.x:pos.y];
 }
 
 - (void) moveTo:(int)newx :(int) newy {
@@ -112,20 +145,52 @@
 - (Hex_Char *) defaultAttributeSet {
     return defaultAttributeSet;
 }
-- (void) setDefaultForegroundColor:(unsigned char) default_fg {
+
+- (void) setDefaultForegroundTo:(unsigned char) default_fg {
     [self defaultAttributeSet]->foreground = default_fg;
 }
-- (void) setDefaultBackgroundColor:(unsigned char) default_bg {
+- (void) setDefaultBackgroundTo:(unsigned char) default_bg {
     [self defaultAttributeSet]->background = default_bg;
 }
-- (void) setDefaultIsBold:(bool) isBold {
+- (void) setDefaultIsBoldTo:(bool) isBold {
     [self defaultAttributeSet]->bold = isBold;
 }
-- (void) setDefaultIsReversedVideo:(bool) isReversed {
+- (void) setDefaultIsReverseTo:(bool) isReversed {
     [self defaultAttributeSet]->reverse = isReversed;
 }
-- (void) setDefaultIsBlinking:(bool) isBlinking {
+- (void) setDefaultIsBlinkingTo:(bool) isBlinking {
     [self defaultAttributeSet]->blink = isBlinking;
+}
+- (void) correspondingOutputDidResizeToDimensions:(Hex_MGPoint) size {
+    [self deallocateBuffers];
+
+    self.width = size.x;
+    self.height = size.y;
+    [self allocateBuffers];
+}
+
+- (void) setForegroundTo:(unsigned char) fg atPosition:(Hex_MGPoint) pos {
+    [self output_buffer][pos.y][pos.x].foreground = fg;
+}
+
+- (void) setBackgroundTo:(unsigned char) bg atPosition:(Hex_MGPoint) pos {
+    [self output_buffer][pos.y][pos.x].background = bg;
+}
+
+- (void) setIsBoldTo:(bool) bold atPosition:(Hex_MGPoint) pos {
+    [self output_buffer][pos.y][pos.x].bold = bold;
+}
+
+- (void) setIsReverseTo:(bool) reverse atPosition:(Hex_MGPoint) pos {
+    [self output_buffer][pos.y][pos.x].reverse = reverse;
+}
+
+- (void) setIsBlinkingTo:(bool) blinking atPosition:(Hex_MGPoint) pos {
+    [self output_buffer][pos.y][pos.x].blink = blinking;
+}
+
+- (Hex_Char) getAttributesAtPosition:(Hex_MGPoint) pos {
+    return [self output_buffer][pos.y][pos.x];
 }
 
 @end

@@ -13,6 +13,7 @@
 #include <UI/Impl/Base.h>
 #include <UI/Impl/Impl.h>
 #include <UI/Impl/TTY.h>
+#include <UI/Impl/Cocoa.h>
 
 typedef Hex_UIImplementation_TTY Hex_UIInterface;
 

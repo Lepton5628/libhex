@@ -13,6 +13,7 @@
 # include <Model/Geometry/Point.h>
 
 # include <UI/Attribute.h>
+# include <cstring>
 
 /**
  * Output Buffer.
@@ -104,19 +105,18 @@
 - (void) correspondingOutputDidResizeToDimensions:(Hex_MGPoint) size;
 
 /**
- * Set the attributes at the specified position to the attributes specified.
- *
- * @param pos The position for which we are setting the attributes.
- * @param new_attr The attributes that we are going to use.
- */
-- (void) setAttributesAtPosition:(Hex_MGPoint) pos to:(Hex_Char)new_attr;
-/**
  * Get the attributes at the specified position.
  *
  * @param pos The position from which we are getting the attributes.
  * @return The attributes at @c pos.
  */
 - (Hex_Char) getAttributesAtPosition:(Hex_MGPoint) pos;
+
+- (void) setForegroundTo:(unsigned char) fg atPosition:(Hex_MGPoint) pos;
+- (void) setBackgroundTo:(unsigned char) bg atPosition:(Hex_MGPoint) pos;
+- (void) setIsBoldTo:(bool) bold atPosition:(Hex_MGPoint) pos;
+- (void) setIsReverseTo:(bool) reverse atPosition:(Hex_MGPoint) pos;
+- (void) setIsBlinkingTo:(bool) blinking atPosition:(Hex_MGPoint) pos;
 
 /**
  * Move the cursor forward by one.
@@ -129,17 +129,18 @@
  *
  */
 - (void) moveTo:(int)x :(int) y;
+- (void) moveTo:(Hex_MGPoint)pos;
 
 - (void) empty;
 
 - (void) allocateBuffers;
 - (void) deallocateBuffers;
 
-- (void) setDefaultForegroundColor:(unsigned char) default_fg;
-- (void) setDefaultBackgroundColor:(unsigned char) default_bg;
-- (void) setDefaultIsBold:(bool) isBold;
-- (void) setDefaultIsReversedVideo:(bool) isReversed;
-- (void) setDefaultIsBlinking:(bool) isBlinking;
+- (void) setDefaultForegroundTo:(unsigned char) default_fg;
+- (void) setDefaultBackgroundTo:(unsigned char) default_bg;
+- (void) setDefaultIsBoldTo:(bool) isBold;
+- (void) setDefaultIsReverseTo:(bool) isReversed;
+- (void) setDefaultIsBlinkingTo:(bool) isBlinking;
 - (void) setDefaultAttributeSet:(Hex_Char) new_attr;
 
 - (Hex_Char *) defaultAttributeSet;

@@ -11,7 +11,7 @@ FILE=$1
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd );
 
 if [[ -e $DIR/src/$FILE.mm ]]; then
-    if g++ -g -o $DIR/build/$FILE $DIR/src/$FILE.mm -L$DIR/../../build -lhex -I$DIR/../../include -lobjc; then
+    if g++ -g -o $DIR/build/$FILE $DIR/src/$FILE.mm -L$DIR/../../build -lhex -I$DIR/../../include -lobjc -framework Cocoa; then
         if $DIR/build/$FILE; then
             echo "Ran fine!"
         else

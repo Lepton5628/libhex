@@ -89,7 +89,14 @@ compile_directory() {
             fi
 		else
             echo "Compiling file $1/$sfile"
-            if ! $CC -c -o $OBJ/$1/$sfile.o $CCFLAGS $1/$sfile.mm ; then
+            line_one=`head -n 1 $1/$sfile.mm`
+            if [[ $line_one =~ "^\/\/WITH_FLAGS \((.*)\)" ]]; then
+                XTRA_FLAGS="${BASH_REMATCH[1]}"
+                echo "Warning: compiling with flags: $XTRA_FLAGS"
+            else
+                XTRA_FLAGS=""
+            fi
+            if ! $CC -c -o $OBJ/$1/$sfile.o $XTRA_FLAGS $CCFLAGS $1/$sfile.mm ; then
                 failure "Could not compile file"
             fi
 			OBJECTS="$OBJECTS $OBJ/$1/$sfile.o";

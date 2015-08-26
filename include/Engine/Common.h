@@ -20,12 +20,7 @@
 # define HEX_ROOT_CLASS Object
 #endif
 
-@interface HexObject : HEX_ROOT_CLASS {
-    int __hex_references;
-}
-
-- (id) retain;
-- (id) release;
+@interface HexObject : HEX_ROOT_CLASS
 
 @end
 
