@@ -52,7 +52,7 @@ green(){
 }
 
 check_dependency(){
-    if gcc -o tests/deps/build/$1 tests/deps/src/$1.c > tests/deps/build/error 2>&1; then
+    if gcc -o tests/deps/build/$1 tests/deps/src/$1.mm > tests/deps/build/error 2>&1; then
         if tests/deps/build/$1; then
             green "Your installation of $1 is working!"
         else
