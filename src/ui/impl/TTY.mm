@@ -58,6 +58,14 @@ static id<Hex_UIImplementation> my_instantiation = nil;
     tcsetattr(STDIN_FILENO, TCSANOW, tp);
 }
 
++ (void) UISizeDidChange {
+    Hex_UIImplementation_TTY *tty = (Hex_UIImplementation_TTY *)[self getInstance];
+    
+    [tty measureOutput];
+    
+    [[tty outputBuffer] correspondingOutputDidResizeToDimensions:Hex_MGPoint([tty width], [tty height])];
+}
+
 + (void) UIDidFinishLaunching {
     setlocale(LC_ALL, "");
     

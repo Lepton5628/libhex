@@ -13,7 +13,7 @@
 
 struct Hex_MGPoint {
     int x, y;
-    
+
     Hex_MGPoint(int x, int y){
         this->x = x;
         this->y = y;
