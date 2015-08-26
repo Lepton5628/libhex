@@ -73,7 +73,7 @@
             ly = 0;
         }
     }
-    [self moveTo:lx :ly];goto <#label#>
+    [self moveTo:lx :ly];
 }
 
 - (void) moveTo:(int)newx :(int) newy {
