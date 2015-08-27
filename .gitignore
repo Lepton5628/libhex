@@ -1,2 +1,7 @@
-_site
-.sass-cache
+build/*
+Myriad.xcodeproj
+Myriad.xcodeproj/*
+Myriad.xcodeproj/*/*
+Myriad.xcodeproj/*/*/*
+Myriad.xcodeproj/*/*/*/*
+
