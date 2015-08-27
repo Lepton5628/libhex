@@ -1,0 +1,7 @@
+build/*
+Myriad.xcodeproj
+Myriad.xcodeproj/*
+Myriad.xcodeproj/*/*
+Myriad.xcodeproj/*/*/*
+Myriad.xcodeproj/*/*/*/*
+
