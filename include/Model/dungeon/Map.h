@@ -1,3 +1,5 @@
+// -*- mode: objective-c++; -*-
+
 //
 //  Map.h
 //  libhex

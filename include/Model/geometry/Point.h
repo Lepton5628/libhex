@@ -1,4 +1,5 @@
-// -*- mode: objective-c; -*-
+// -*- mode: objective-c++; -*-
+
 //
 //  Point.h
 //  libhex

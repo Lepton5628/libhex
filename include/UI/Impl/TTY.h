@@ -1,3 +1,5 @@
+// -*- mode: objective-c++; -*-
+
 //
 //  TTY.h
 //  libhex

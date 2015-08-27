@@ -1,3 +1,5 @@
+// -*- mode: objective-c++; -*-
+
 //
 //  Header.h
 //  libhex
@@ -9,11 +11,11 @@
 #ifndef libhex_UI_h
 #define libhex_UI_h
 
-@import UI.Attribute;
-@import UI.Impl.Base;
-@import UI.Impl.Impl;
-@import UI.Impl.TTY;
-@import UI.Impl.Cocoa;
+#import <UI/Attribute.h>
+#import <UI/Impl/Base.h>
+#import <UI/Impl/Impl.h>
+#import <UI/Impl/TTY.h>
+#import <UI/Impl/Cocoa/h>
 
 typedef Hex_UIImplementation_TTY Hex_UIInterface;
 
