@@ -9,7 +9,7 @@
 #ifndef libhex_Header_h
 #define libhex_Header_h
 
-#include <Engine/Common.h>
+#import <Engine/Common.h>
 
 struct Hex_MGPoint {
     int x, y;

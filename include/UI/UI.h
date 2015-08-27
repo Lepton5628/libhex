@@ -13,7 +13,7 @@
 @import UI.Impl.Base;
 @import UI.Impl.Impl;
 @import UI.Impl.TTY;
-@import UI.Impl.Cocoa;class
+@import UI.Impl.Cocoa;
 
 typedef Hex_UIImplementation_TTY Hex_UIInterface;
 
