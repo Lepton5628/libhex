@@ -4,6 +4,7 @@ layout: default
 
 <div class="home">
 
-{% include_relative about.html %}
+{% capture about %}{% include_relative aboutt.md %}{% endcapture %}
+{{ about | markdownify }}
 
 </div>
