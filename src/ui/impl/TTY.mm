@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Max C. All rights reserved.
 //
 
-#import <UI/Impl/TTY.h>
-#import <UI/Attribute.h>
+#import <UI/Impl/TTY.h++>
+#import <UI/Attribute.h++>
 
 @implementation Hex_UIImplementation_TTY
 
