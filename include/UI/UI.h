@@ -9,11 +9,11 @@
 #ifndef libhex_UI_h
 #define libhex_UI_h
 
-@import UI.Attribute
-@import UI.Impl.Base
-@import UI.Impl.Impl
-@import UI.Impl.TTY
-@import UI.Impl.Cocoa
+@import UI.Attribute;
+@import UI.Impl.Base;
+@import UI.Impl.Impl;
+@import UI.Impl.TTY;
+@import UI.Impl.Cocoa;
 
 typedef Hex_UIImplementation_TTY Hex_UIInterface;
 
