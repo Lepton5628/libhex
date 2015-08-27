@@ -5,3 +5,5 @@ Myriad.xcodeproj/*/*
 Myriad.xcodeproj/*/*/*
 Myriad.xcodeproj/*/*/*/*
 
+_site
+.sass-cache
