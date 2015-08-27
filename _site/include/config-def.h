@@ -1,6 +1,0 @@
-#ifndef HEX_CONFIG_DEF_H
-#define HEX_CONFIG_DEF_H
-
-#define OUTPUT_MODE OUTPUT_MODE_TTY
-
-#endif
