@@ -1,9 +1,13 @@
 build/*
-Myriad.xcodeproj
-Myriad.xcodeproj/*
-Myriad.xcodeproj/*/*
-Myriad.xcodeproj/*/*/*
-Myriad.xcodeproj/*/*/*/*
+Libhex.xcodeproj
+Libhex.xcodeproj/*
+Libhex.xcodeproj/*/*
+Libhex.xcodeproj/*/*/*
+Libhex.xcodeproj/*/*/*/*
+tests
+tests/*
+tests/*/*
+tests/*/*/*
 
 _site
 .sass-cache
