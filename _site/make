@@ -65,6 +65,7 @@ check_dependency(){
 
 deps(){
     mkdir -p tests/deps/build
+    
     echo "\tChecking dependencies..."
 
     check_dependency arc4random
