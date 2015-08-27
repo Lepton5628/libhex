@@ -1,10 +1,10 @@
+// -*- mode: objective-c; -*-
 //
-//  Header.h
+//  Point.h
 //  libhex
 //
 //  Created by Max C on 8/23/15.
 //  Copyright (c) 2015 Max C. All rights reserved.
-//
 
 #ifndef libhex_Header_h
 #define libhex_Header_h
