@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Max C. All rights reserved.
 //
 
-#include <UI/Attribute.h++>
+#include <UI/Attribute.h>
 
 @implementation HexColor
 + (unsigned char) colorWithR:(char)r G:(char)g B:(char) b {

@@ -9,10 +9,10 @@
 #ifndef LIBHEX_UI_Base_h
 #define LIBHEX_UI_Base_h
 
-#include <Engine/Common.h++>
-#include <Model/OutputBuffer.h++>
-#include <UI/Impl/Impl.h++>
-#include <UI/Attribute.h++>
+#include <Engine/Common.h>
+#include <Model/OutputBuffer.h>
+#include <UI/Impl/Impl.h>
+#include <UI/Attribute.h>
 
 /**
  * Base class which implements some of the variables and properties for <Hex_UIImplementation>, as well as it's singleton pattern.

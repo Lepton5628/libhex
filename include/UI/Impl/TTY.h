@@ -9,13 +9,13 @@
 #ifndef LIBHEX_UI_Impl_TTY_h
 #define LIBHEX_UI_Impl_TTY_h
 
-# include <Engine/Common.h++>
+# include <Engine/Common.h>
 
-# include <Model/OutputBuffer.h++>
+# include <Model/OutputBuffer.h>
 
-# include <UI/Impl/Impl.h++>
-# include <UI/Impl/Base.h++>
-# include <UI/Attribute.h++>
+# include <UI/Impl/Impl.h>
+# include <UI/Impl/Base.h>
+# include <UI/Attribute.h>
 
 # include <sys/ioctl.h>
 # include <termios.h>

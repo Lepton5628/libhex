@@ -9,7 +9,7 @@
 #ifndef libhex_Model_Map_h
 #define libhex_Model_Map_h
 
-#include <Engine/Common.h++>
+#include <Engine/Common.h>
 
 @interface Hex_MMap : HexObject
 

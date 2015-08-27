@@ -1,4 +1,4 @@
-#include <Model/OutputBuffer.h++>
+#include <Model/OutputBuffer.h>
 #include <stdio.h>
 
 @implementation Hex_M_UIOutputBuffer

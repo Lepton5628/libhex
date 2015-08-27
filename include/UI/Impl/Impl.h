@@ -9,9 +9,9 @@
 #ifndef libhex_UI_Impl_h
 #define libhex_UI_Impl_h
 
-#include <Engine/Common.h++>
-#include <Model/OutputBuffer.h++>
-#include <UI/Attribute.h++>
+#include <Engine/Common.h>
+#include <Model/OutputBuffer.h>
+#include <UI/Attribute.h>
 
 @protocol Hex_UIImplementation
 

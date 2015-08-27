@@ -9,10 +9,10 @@
 #ifndef LIBHEX_Model_OutputBuffer_h
 #define LIBHEX_Model_OutputBuffer_h
 
-# include <Engine/Common.h++>
-# include <Model/Geometry/Point.h++>
+# include <Engine/Common.h>
+# include <Model/Geometry/Point.h>
 
-# include <UI/Attribute.h++>
+# include <UI/Attribute.h>
 
 # include <cstring>
 

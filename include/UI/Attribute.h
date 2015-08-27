@@ -9,7 +9,7 @@
 #ifndef LIBHEX_UI_Attribute_h
 #define LIBHEX_UI_Attribute_h
 
-#import <Engine/Common.h++>
+#import <Engine/Common.h>
 
 /**
  * @brief Container for a single character on the UI.
