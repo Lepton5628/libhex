@@ -1,3 +1,5 @@
+// -*- mode:objective-c -*-
+
 #include <UI/UI.h>
 
 int main(){

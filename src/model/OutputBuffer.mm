@@ -1,3 +1,5 @@
+// -*- mode:objective-c -*-
+
 #include <Model/OutputBuffer.h>
 #include <stdio.h>
 

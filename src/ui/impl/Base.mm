@@ -1,3 +1,5 @@
+// -*- mode:objective-c -*-
+
 #include <UI/Impl/Impl.h>
 #include <UI/Impl/Base.h>
 

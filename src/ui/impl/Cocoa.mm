@@ -1,4 +1,5 @@
 //WITH_FLAGS (-framework cocoa)
+// -*- mode:objective-c -*-
 
 #if defined(__APPLE__) && defined(__MACH__)
 
