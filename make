@@ -206,6 +206,8 @@ all(){
 	compile_directory src
     link_objects
 
+    sh tests/main/make.sh test
+
     if [[ SANITIZE -eq 0 ]]; then
         echo "\n\tFINISHED BUILDING\n"
     else

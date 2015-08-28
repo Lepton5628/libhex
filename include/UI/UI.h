@@ -1,4 +1,4 @@
-// -*- mode: objective-c++; -*-
+// -*- mode: objective-c; -*-
 
 //
 //  Header.h
@@ -15,8 +15,8 @@
 #import <UI/Impl/Base.h>
 #import <UI/Impl/Impl.h>
 #import <UI/Impl/TTY.h>
-#import <UI/Impl/Cocoa/h>
+#import <UI/Impl/Cocoa.h>
 
-typedef Hex_UIImplementation_TTY Hex_UIInterface;
+typedef Hex_UIImplementation_Cocoa Hex_UIInterface;
 
 #endif

@@ -1,4 +1,4 @@
-# Hacklike Engine eXtended
+# Hacklike Engine Xtended
 
 This is an Objective-C++ library for roguelike development. For a list of features, see [the Features Page](doc/Features.md).  
 

@@ -1,4 +1,4 @@
-// -*- mode: objective-c++; -*-
+// -*- mode: objective-c; -*-
 
 //
 //  Attribute.h
@@ -78,7 +78,7 @@ struct Hex_Char {
         result |= (reverse << 26);
 // Jis' padding = expendable
 //        result |= (flag_pad << 31);
-        result |= (unicode_alias << 32);
+//        result |= (unicode_alias << 32);
 // Jis' padding = expendable
 //        result |= (struct_pad << 40);
         return result;
