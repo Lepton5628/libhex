@@ -1,3 +1,5 @@
+// -*- mode:objective-c -*-
+
 //
 //  termios.c
 //  libhex

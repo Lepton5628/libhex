@@ -1,3 +1,5 @@
+// -*- mode:objective-c -*-
+
 //
 //  arc4random.c
 //  libhex
