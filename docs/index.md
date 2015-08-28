@@ -36,11 +36,11 @@ Each namespace may have yet **more** subnamespaces, such as `Hex_MG...` for geom
 // Thx, http://stackoverflow.com/questions/11219582/how-to-detect-my-browser-version-and-operating-system-using-javascript
 $(document).ready(function(){var OSName="Unknown OS";
 if (navigator.appVersion.indexOf("Mac")==-1){
-    $('.build-instructions').load("/docs/build-osx");
+    $('.build-instructions').load("build-osx");
 } else {
-    $('.build-instructions').load("/docs/build-unix");
+    $('.build-instructions').load("build-unix");
     if(navigator.appVersion.indexOf("Win")==-1){
-        $('.build-win-instructions').load("/docs/build-win");
+        $('.build-win-instructions').load("build-win");
     }
 }});
 </script>
