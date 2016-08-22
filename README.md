@@ -1,3 +1,5 @@
+# THIS PROJECT IS NO LONGER ACTIVE! IT'S SPIRITUAL SUCCESSOR IS AN ACTUAL ROGUELIKE (IN C++), [Shatter](https://github.com/cmura81/Shatter).
+
 # Hacklike Engine Xtended
 
 This is an Objective-C++ library for roguelike development. For a list of features, see [the Features Page](doc/Features.md).  
